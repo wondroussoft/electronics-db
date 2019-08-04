@@ -1,6 +1,5 @@
 package com.wondroussoft.electronics.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,5 +81,16 @@ public class ElectronicsController {
 		repoProduct.save(product);
 
 		return "redirect:/products/category/" + categoryId;
+	}
+	
+	@GetMapping("/product/{productId}/details")
+	public String getProduct(Model model, @PathVariable(name = "productId") Long productId) {
+
+		Product product = repoProduct.findById(productId).get();
+
+		model.addAttribute("product", product);
+
+		return "product_detail";
+
 	}
 }

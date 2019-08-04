@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.wondroussoft.electronics</groupId>
-	<artifactId>electronics</artifactId>
+	<artifactId>electronics-db</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>electronics</name>
-	<description>Demo project for electronics sale</description>
+	<description>Demo project for electronics sale using PostgreSQL DB</description>
 
 	<properties>
 		<java.version>1.8</java.version>
